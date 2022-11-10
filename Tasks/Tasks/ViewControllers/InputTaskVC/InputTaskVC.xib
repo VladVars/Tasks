@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,16 +24,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-I8-ngu">
-                    <rect key="frame" x="7" y="253" width="400" height="400"/>
+                    <rect key="frame" x="7" y="255" width="400" height="400"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Время" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-NG-Era">
-                            <rect key="frame" x="40" y="164" width="320" height="34"/>
+                            <rect key="frame" x="40" y="168" width="320" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="8Z3-hm-Yzb"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sh-z7-MAx">
-                            <rect key="frame" x="60" y="228" width="280" height="24.5"/>
+                            <rect key="frame" x="60" y="236" width="280" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="g4c-ns-aWn"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Добавить " buttonSize="small">
                                 <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
@@ -42,29 +49,35 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihL-nQ-sDg">
-                            <rect key="frame" x="60" y="272.5" width="280" height="24.5"/>
+                            <rect key="frame" x="60" y="294" width="280" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="tnM-kB-PjF"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="Просмотр задач" buttonSize="small">
                                 <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="tableTask:" destination="-1" eventType="touchUpInside" id="Eop-XW-kPH"/>
+                                <action selector="tableTask:" destination="-1" eventType="touchUpInside" id="FnY-uQ-H5R"/>
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Задача" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-Sd-S0A">
-                            <rect key="frame" x="40" y="110" width="320" height="34"/>
+                            <rect key="frame" x="40" y="110" width="320" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="xK2-Td-QMU"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Напоминалка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-B2-fEm">
-                            <rect key="frame" x="122" y="35" width="156.5" height="30"/>
+                            <rect key="frame" x="112.5" y="35" width="175.5" height="33.5"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                             <color key="textColor" systemColor="systemBlueColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-3Z-vAj">
-                            <rect key="frame" x="185" y="71.5" width="30" height="27.5"/>
+                            <rect key="frame" x="185" y="75" width="30" height="27.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="ZTj-QF-gnm"/>
                                 <constraint firstAttribute="width" constant="30" id="wnx-vi-NXN"/>

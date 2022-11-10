@@ -46,26 +46,25 @@ class InputTaskVC: UIViewController {
     
     @IBAction func saveTask(_ sender: Any) {
         
-        
-        
-        let saveTask = Task()
-        saveTask.task = taskField.text ?? ""
-        saveTask.time = selectedDate
-        RealmManager.save(object: saveTask)
-        NotificationManager.requestAutorezation(task: saveTask.task, date: saveTask.time!)
-
-        
-        taskField.text = ""
-        dateField.text = ""
-        
+        if taskField.text == "" || dateField.text == "" {
+            let alert = UIAlertController.init(title: "Внимание!", message: "Поля не могут быть пустыми!", preferredStyle: .alert)
+            let alertOk = UIAlertAction(title: "Ок", style: .cancel)
+            alert.addAction(alertOk)
+            present(alert, animated: true)
+        } else {
+            let saveTask = Task()
+            saveTask.task = taskField.text ?? ""
+            saveTask.time = selectedDate
+            RealmManager.save(object: saveTask)
+            NotificationManager.requestAutorezation(task: saveTask.task, date: saveTask.time!)
+            
+            taskField.text = ""
+            dateField.text = ""
+        }
     }
     @IBAction func tableTask(_ sender: Any) {
-        let tableVC = TableTasksVC(nibName: String(describing: TableTasksVC.self), bundle: nil)
-        navigationController?.pushViewController(tableVC, animated: true)
-//        present(tableVC, animated: true)
+        let taskVC = TableTasksVC(nibName: String(describing: TableTasksVC.self), bundle: nil)
+        navigationController?.pushViewController(taskVC, animated: true)
+//        present(taskVC, animated: true)
     }
-    
-
- 
-
 }
