@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <accessibilityOverrides dynamicTypePreference="4"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -48,19 +49,6 @@
                                 <action selector="saveTask:" destination="-1" eventType="touchUpInside" id="WK9-UE-RGf"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihL-nQ-sDg">
-                            <rect key="frame" x="60" y="294" width="280" height="38"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="38" id="tnM-kB-PjF"/>
-                            </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Просмотр задач" buttonSize="small">
-                                <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="tableTask:" destination="-1" eventType="touchUpInside" id="FnY-uQ-H5R"/>
-                            </connections>
-                        </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Задача" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-Sd-S0A">
                             <rect key="frame" x="40" y="110" width="320" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,13 +71,26 @@
                                 <constraint firstAttribute="width" constant="30" id="wnx-vi-NXN"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-X4-lz2">
+                            <rect key="frame" x="60" y="294" width="280" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="KSd-OW-f48"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Просмотр задач" buttonSize="small">
+                                <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="tableTask:" destination="-1" eventType="touchUpInside" id="DnH-lG-gjB"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="dsl-3Z-vAj" firstAttribute="centerX" secondItem="zCl-I8-ngu" secondAttribute="centerX" id="31N-fP-22s"/>
                         <constraint firstItem="hWB-Sd-S0A" firstAttribute="top" secondItem="zCl-I8-ngu" secondAttribute="top" constant="110" id="4gz-Wk-QFm"/>
                         <constraint firstItem="spQ-NG-Era" firstAttribute="top" secondItem="hWB-Sd-S0A" secondAttribute="bottom" constant="20" id="5bQ-Xh-jZM"/>
-                        <constraint firstAttribute="trailing" secondItem="ihL-nQ-sDg" secondAttribute="trailing" constant="60" id="E4o-LT-Da1"/>
+                        <constraint firstItem="aoX-X4-lz2" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="60" id="Frk-vN-iyB"/>
                         <constraint firstItem="dsl-3Z-vAj" firstAttribute="top" secondItem="lmE-B2-fEm" secondAttribute="bottom" constant="5" id="LPg-zQ-HNi"/>
                         <constraint firstItem="lmE-B2-fEm" firstAttribute="centerX" secondItem="zCl-I8-ngu" secondAttribute="centerX" id="S56-pX-oS4"/>
                         <constraint firstAttribute="trailing" secondItem="4sh-z7-MAx" secondAttribute="trailing" constant="60" id="Uuw-q1-U1T"/>
@@ -97,8 +98,8 @@
                         <constraint firstItem="4sh-z7-MAx" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="60" id="bYt-88-MYc"/>
                         <constraint firstItem="hWB-Sd-S0A" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="40" id="cBX-Y0-TC1"/>
                         <constraint firstItem="lmE-B2-fEm" firstAttribute="top" secondItem="zCl-I8-ngu" secondAttribute="top" constant="35" id="dgN-aj-Ydo"/>
-                        <constraint firstItem="ihL-nQ-sDg" firstAttribute="top" secondItem="4sh-z7-MAx" secondAttribute="bottom" constant="20" id="etc-Kb-cSo"/>
-                        <constraint firstItem="ihL-nQ-sDg" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="60" id="pQ9-CN-syy"/>
+                        <constraint firstAttribute="trailing" secondItem="aoX-X4-lz2" secondAttribute="trailing" constant="60" id="ohp-7O-hG9"/>
+                        <constraint firstItem="aoX-X4-lz2" firstAttribute="top" secondItem="4sh-z7-MAx" secondAttribute="bottom" constant="20" id="qOE-qW-yhk"/>
                         <constraint firstAttribute="width" constant="400" id="sZp-kh-6sM"/>
                         <constraint firstAttribute="trailing" secondItem="hWB-Sd-S0A" secondAttribute="trailing" constant="40" id="uJt-b2-yT4"/>
                         <constraint firstAttribute="trailing" secondItem="spQ-NG-Era" secondAttribute="trailing" constant="40" id="uej-yd-sGi"/>

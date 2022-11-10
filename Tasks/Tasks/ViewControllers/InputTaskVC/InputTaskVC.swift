@@ -36,7 +36,15 @@ class InputTaskVC: UIViewController {
         piker.preferredDatePickerStyle = .wheels
         piker.addTarget(self, action: #selector(dateDidPiked), for: .allEvents)
     
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @objc func dateDidPiked() {
         self.selectedDate = piker.date
         let formatter = DateFormatter()
@@ -63,8 +71,8 @@ class InputTaskVC: UIViewController {
         }
     }
     @IBAction func tableTask(_ sender: Any) {
-        let taskVC = TableTasksVC(nibName: String(describing: TableTasksVC.self), bundle: nil)
-        navigationController?.pushViewController(taskVC, animated: true)
-//        present(taskVC, animated: true)
+        let taskVC = TableTasksVC.self(nibName: String(describing: TableTasksVC.self), bundle: nil)
+//        navigationController?.pushViewController(taskVC, animated: true)
+        present(taskVC, animated: true)
     }
 }
