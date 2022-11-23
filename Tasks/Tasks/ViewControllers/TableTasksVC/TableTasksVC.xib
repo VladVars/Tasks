@@ -21,17 +21,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-lM-TkR">
-                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     <color key="tintColor" systemColor="tintColor"/>
                     <color key="separatorColor" systemColor="systemBlueColor"/>
                 </tableView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vym-dr-3Ou">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Назад" style="plain" id="Nkj-PB-jq2">
+                            <connections>
+                                <action selector="backAction:" destination="-1" id="lDd-GM-oYk"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" systemColor="systemBlueColor"/>
+                </toolbar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemBlueColor"/>
             <constraints>
                 <constraint firstItem="Dvt-lM-TkR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1G3-pe-i9I"/>
-                <constraint firstItem="Dvt-lM-TkR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FzQ-Ci-IOL"/>
+                <constraint firstItem="Dvt-lM-TkR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="FzQ-Ci-IOL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dvt-lM-TkR" secondAttribute="bottom" id="KL3-Yb-ADw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dvt-lM-TkR" secondAttribute="trailing" id="beF-YP-Z92"/>
             </constraints>
@@ -41,9 +54,6 @@
     <resources>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

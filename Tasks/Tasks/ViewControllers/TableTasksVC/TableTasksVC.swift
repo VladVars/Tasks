@@ -27,6 +27,10 @@ class TableTasksVC: UIViewController {
         tableView.register(nibCell, forCellReuseIdentifier: String(describing: TaskCell.self))
         
     }
+    @IBAction func backAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     
 }
 

@@ -73,6 +73,7 @@ class InputTaskVC: UIViewController {
     @IBAction func tableTask(_ sender: Any) {
         let taskVC = TableTasksVC.self(nibName: String(describing: TableTasksVC.self), bundle: nil)
 //        navigationController?.pushViewController(taskVC, animated: true)
+        taskVC.modalTransitionStyle = .flipHorizontal
         present(taskVC, animated: true)
     }
 }
