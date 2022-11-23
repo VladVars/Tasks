@@ -9,6 +9,9 @@ import UIKit
 
 class TableTasksVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleTasks: UILabel!
+    @IBOutlet weak var book: UIImageView!
+    
     
     var tasks = RealmManager.read(){
         didSet {
@@ -18,19 +21,21 @@ class TableTasksVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Список задач📖"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         tableView.dataSource = self
         tableView.delegate = self
         
         let nibCell = UINib(nibName: String(describing: TaskCell.self), bundle: nil)
         tableView.register(nibCell, forCellReuseIdentifier: String(describing: TaskCell.self))
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        update()
+    }
+    
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true)
     }
-    
     
 }
 
@@ -55,9 +60,23 @@ extension TableTasksVC: UITableViewDelegate {
         let deleteAction = UIAlertAction(title: "Удалить", style: .destructive) { _ in
             RealmManager.delete(object: self.tasks[indexPath.row])
             self.tasks = RealmManager.read()
+            
         }
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
         present(alert, animated: true)
+        update()
     }
+}
+
+extension TableTasksVC: Update {
+    func update() {
+        if RealmManager.read().count == 0 {
+            titleTasks.text = "Список пуст"
+            book.isHidden = true
+        } else {
+            titleTasks.text = "Список задач"
+        }
+    }
+    
 }

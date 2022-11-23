@@ -59,16 +59,16 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Напоминалка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-B2-fEm">
-                            <rect key="frame" x="112.5" y="35" width="175.5" height="33.5"/>
+                            <rect key="frame" x="112.5" y="35" width="175" height="33.5"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                             <color key="textColor" systemColor="systemBlueColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-3Z-vAj">
-                            <rect key="frame" x="185" y="75" width="30" height="27.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbook" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-3Z-vAj">
+                            <rect key="frame" x="185" y="73.5" width="30" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="ZTj-QF-gnm"/>
-                                <constraint firstAttribute="width" constant="30" id="wnx-vi-NXN"/>
+                                <constraint firstAttribute="width" constant="30" id="LQ7-HK-Xru"/>
+                                <constraint firstAttribute="height" constant="30" id="aZ2-hb-0VQ"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-X4-lz2">
@@ -118,7 +118,7 @@
         </view>
     </objects>
     <resources>
-        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="icbook" width="512" height="512"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

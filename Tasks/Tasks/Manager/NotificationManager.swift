@@ -23,12 +23,12 @@ final class NotificationManager {
     
     class func setNotification(task: String, date: Date) {
         let content = UNMutableNotificationContent()
-        content.title =  "Здарова, ты не забыл!?"
-        content.subtitle = "Через 15 минут нужно:"
+        content.title =  "Напоминание"
+        content.subtitle = "Через 10 минут нужно:"
         content.body = task
         content.sound = .default
         
-        let pushDate = Date(timeIntervalSince1970: date.timeIntervalSince1970 - (15 * 60))
+        let pushDate = Date(timeIntervalSince1970: date.timeIntervalSince1970 - (10 * 60))
         let calendar = Calendar.current
         let dateComponetns = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: pushDate)
         let calendarTriger = UNCalendarNotificationTrigger(dateMatching: dateComponetns, repeats: false)

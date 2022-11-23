@@ -68,6 +68,7 @@ class InputTaskVC: UIViewController {
             
             taskField.text = ""
             dateField.text = ""
+            dismissKeyboard()
         }
     }
     @IBAction func tableTask(_ sender: Any) {

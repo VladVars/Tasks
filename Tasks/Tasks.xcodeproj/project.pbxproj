@@ -10,7 +10,6 @@
 		0473EDE6280C414800294409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473EDE5280C414800294409 /* AppDelegate.swift */; };
 		0473EDE8280C414800294409 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473EDE7280C414800294409 /* SceneDelegate.swift */; };
 		0473EDED280C414800294409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0473EDEB280C414800294409 /* Main.storyboard */; };
-		0473EDEF280C414900294409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0473EDEE280C414900294409 /* Assets.xcassets */; };
 		0473EDF2280C414900294409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0473EDF0280C414900294409 /* LaunchScreen.storyboard */; };
 		0473EDFD280C426200294409 /* InputTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473EDFB280C426200294409 /* InputTaskVC.swift */; };
 		0473EDFE280C426200294409 /* InputTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473EDFC280C426200294409 /* InputTaskVC.xib */; };
@@ -22,6 +21,8 @@
 		0473EE0E280C4F6600294409 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0473EE0C280C4F6600294409 /* TaskCell.xib */; };
 		0473EE10280C7B3F00294409 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0473EE0F280C7B3F00294409 /* NotificationManager.swift */; };
 		97FE6145C67A2A32163BB99A /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA9A7D17F4183BE76A5DDA8 /* Pods_Tasks.framework */; };
+		D161C67A292E5ECE00DCBC26 /* Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161C679292E5ECE00DCBC26 /* Update.swift */; };
+		D161C67B292E6AD300DCBC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0473EDEE280C414900294409 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		0473EE0F280C7B3F00294409 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		8DBDC9D286B7500EF66D55F9 /* Pods-Tasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.debug.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA9A7D17F4183BE76A5DDA8 /* Pods_Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D161C679292E5ECE00DCBC26 /* Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Update.swift; sourceTree = "<group>"; };
 		D49C15ABF1247C6AE0E713FC /* Pods-Tasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.release.xcconfig"; path = "Target Support Files/Pods-Tasks/Pods-Tasks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		0473EDE4280C414800294409 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				D161C678292E5EB300DCBC26 /* Protocol */,
 				0473EE0A280C4F4100294409 /* TaskCell */,
 				0473EE02280C4A1900294409 /* Manager */,
 				0473EDFF280C489700294409 /* Model */,
@@ -163,6 +166,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D161C678292E5EB300DCBC26 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D161C679292E5ECE00DCBC26 /* Update.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,8 +237,8 @@
 				0473EE09280C4E0000294409 /* TableTasksVC.xib in Resources */,
 				0473EDFE280C426200294409 /* InputTaskVC.xib in Resources */,
 				0473EDF2280C414900294409 /* LaunchScreen.storyboard in Resources */,
-				0473EDEF280C414900294409 /* Assets.xcassets in Resources */,
 				0473EE0E280C4F6600294409 /* TaskCell.xib in Resources */,
+				D161C67B292E6AD300DCBC26 /* Assets.xcassets in Resources */,
 				0473EDED280C414800294409 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +295,7 @@
 				0473EE01280C48AD00294409 /* Task.swift in Sources */,
 				0473EE0D280C4F6600294409 /* TaskCell.swift in Sources */,
 				0473EDE6280C414800294409 /* AppDelegate.swift in Sources */,
+				D161C67A292E5ECE00DCBC26 /* Update.swift in Sources */,
 				0473EE04280C4A3900294409 /* RealmManager.swift in Sources */,
 				0473EDE8280C414800294409 /* SceneDelegate.swift in Sources */,
 				0473EE08280C4E0000294409 /* TableTasksVC.swift in Sources */,

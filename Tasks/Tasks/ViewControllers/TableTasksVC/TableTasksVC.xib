@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableTasksVC" customModule="Tasks" customModuleProvider="target">
             <connections>
+                <outlet property="book" destination="5zB-fT-yeh" id="vnH-6k-mAH"/>
                 <outlet property="tableView" destination="Dvt-lM-TkR" id="ugJ-NS-uVm"/>
+                <outlet property="titleTasks" destination="lyG-y3-uKV" id="efp-6h-lbe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-lM-TkR">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     <color key="tintColor" systemColor="tintColor"/>
                     <color key="separatorColor" systemColor="systemBlueColor"/>
@@ -30,6 +32,7 @@
                     <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="pH4-1w-8eO"/>
                         <barButtonItem title="Назад" style="plain" id="Nkj-PB-jq2">
                             <connections>
                                 <action selector="backAction:" destination="-1" id="lDd-GM-oYk"/>
@@ -39,19 +42,37 @@
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="barTintColor" systemColor="systemBlueColor"/>
                 </toolbar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список задач" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyG-y3-uKV">
+                    <rect key="frame" x="128" y="58" width="158" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbook2" translatesAutoresizingMaskIntoConstraints="NO" id="5zB-fT-yeh">
+                    <rect key="frame" x="291" y="57.5" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ffw-J6-MfE"/>
+                        <constraint firstAttribute="width" constant="30" id="wX3-cN-0BU"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBlueColor"/>
             <constraints>
                 <constraint firstItem="Dvt-lM-TkR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1G3-pe-i9I"/>
+                <constraint firstItem="lyG-y3-uKV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="AY2-Zt-6rD"/>
                 <constraint firstItem="Dvt-lM-TkR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="FzQ-Ci-IOL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dvt-lM-TkR" secondAttribute="bottom" id="KL3-Yb-ADw"/>
+                <constraint firstItem="5zB-fT-yeh" firstAttribute="centerY" secondItem="lyG-y3-uKV" secondAttribute="centerY" id="QCi-zm-wj5"/>
+                <constraint firstItem="lyG-y3-uKV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SmN-st-3AP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dvt-lM-TkR" secondAttribute="trailing" id="beF-YP-Z92"/>
+                <constraint firstItem="5zB-fT-yeh" firstAttribute="leading" secondItem="lyG-y3-uKV" secondAttribute="trailing" constant="5" id="inB-e1-pie"/>
             </constraints>
-            <point key="canvasLocation" x="-39" y="-11"/>
+            <point key="canvasLocation" x="-39.130434782608695" y="-11.383928571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="icbook2" width="512" height="512"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
