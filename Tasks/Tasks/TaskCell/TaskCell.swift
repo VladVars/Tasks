@@ -10,15 +10,17 @@ import UIKit
 class TaskCell: UITableViewCell {
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var unCheck: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-    func configureCell(taskText: String, taskTime: Date) {
-        taskLabel.text = taskText
+    func configureCell(task: Task) {
+        unCheck.image = task.isDone ? UIImage(named: "check") : UIImage(named: "uncheck")
+        taskLabel.text = task.task
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyyy HH:mm"
-        dateLabel.text = formatter.string(from: taskTime)
+        dateLabel.text = formatter.string(from: task.time!)
     }
 }

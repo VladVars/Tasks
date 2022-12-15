@@ -8,7 +8,7 @@
 import UIKit
 
 class InputTaskVC: UIViewController {
-
+    
     @IBOutlet weak var taskView: UIView!
     @IBOutlet weak var taskField: UITextField!
     @IBOutlet weak var dateField: UITextField!
@@ -35,7 +35,7 @@ class InputTaskVC: UIViewController {
         piker.locale = Locale(identifier: "ru_RU")
         piker.preferredDatePickerStyle = .wheels
         piker.addTarget(self, action: #selector(dateDidPiked), for: .allEvents)
-    
+        
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -73,7 +73,6 @@ class InputTaskVC: UIViewController {
     }
     @IBAction func tableTask(_ sender: Any) {
         let taskVC = TableTasksVC.self(nibName: String(describing: TableTasksVC.self), bundle: nil)
-//        navigationController?.pushViewController(taskVC, animated: true)
         taskVC.modalTransitionStyle = .flipHorizontal
         present(taskVC, animated: true)
     }

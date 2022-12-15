@@ -12,5 +12,5 @@ import RealmSwift
 @objc final class Task: Object {
     @objc dynamic var task: String = ""
     @objc dynamic var time: Date?
-    
+    @objc dynamic var isDone: Bool = false
 }

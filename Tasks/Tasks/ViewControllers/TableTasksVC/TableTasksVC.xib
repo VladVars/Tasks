@@ -24,7 +24,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dvt-lM-TkR">
                     <rect key="frame" x="0.0" y="92" width="414" height="770"/>
-                    <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" systemColor="tintColor"/>
                     <color key="separatorColor" systemColor="systemBlueColor"/>
                 </tableView>
@@ -32,8 +32,7 @@
                     <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="pH4-1w-8eO"/>
-                        <barButtonItem title="Назад" style="plain" id="Nkj-PB-jq2">
+                        <barButtonItem title="Назад" width="167.5" style="plain" id="Nkj-PB-jq2">
                             <connections>
                                 <action selector="backAction:" destination="-1" id="lDd-GM-oYk"/>
                             </connections>
@@ -75,9 +74,6 @@
         <image name="icbook2" width="512" height="512"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

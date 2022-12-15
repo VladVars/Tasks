@@ -11,6 +11,13 @@ import RealmSwift
 
 final class RealmManager {
     private static let realm = try! Realm()
+    class func startTransaction() {
+        realm.beginWrite()
+    }
+    
+    class func claseTransaction() {
+        try? realm.commitWrite()
+    }
     
     static func read() -> [Task] {
         let result = realm.objects(Task.self)
