@@ -27,13 +27,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-I8-ngu">
                     <rect key="frame" x="7" y="255" width="400" height="400"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Время" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-NG-Era">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Время" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-NG-Era">
                             <rect key="frame" x="40" y="168" width="320" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="38" id="8Z3-hm-Yzb"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sh-z7-MAx">
@@ -49,23 +49,23 @@
                                 <action selector="saveTask:" destination="-1" eventType="touchUpInside" id="WK9-UE-RGf"/>
                             </connections>
                         </button>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Задача" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-Sd-S0A">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Задача" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-Sd-S0A">
                             <rect key="frame" x="40" y="110" width="320" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="38" id="xK2-Td-QMU"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Напоминалка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-B2-fEm">
-                            <rect key="frame" x="112.5" y="35" width="175" height="33.5"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задачник" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-B2-fEm">
+                            <rect key="frame" x="126" y="20" width="148" height="41"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                             <color key="textColor" systemColor="systemBlueColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icbook" translatesAutoresizingMaskIntoConstraints="NO" id="dsl-3Z-vAj">
-                            <rect key="frame" x="185" y="73.5" width="30" height="30"/>
+                            <rect key="frame" x="185" y="66" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="LQ7-HK-Xru"/>
                                 <constraint firstAttribute="height" constant="30" id="aZ2-hb-0VQ"/>
@@ -97,7 +97,7 @@
                         <constraint firstItem="spQ-NG-Era" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="40" id="V9w-Xh-8Nk"/>
                         <constraint firstItem="4sh-z7-MAx" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="60" id="bYt-88-MYc"/>
                         <constraint firstItem="hWB-Sd-S0A" firstAttribute="leading" secondItem="zCl-I8-ngu" secondAttribute="leading" constant="40" id="cBX-Y0-TC1"/>
-                        <constraint firstItem="lmE-B2-fEm" firstAttribute="top" secondItem="zCl-I8-ngu" secondAttribute="top" constant="35" id="dgN-aj-Ydo"/>
+                        <constraint firstItem="lmE-B2-fEm" firstAttribute="top" secondItem="zCl-I8-ngu" secondAttribute="top" constant="20" id="dgN-aj-Ydo"/>
                         <constraint firstAttribute="trailing" secondItem="aoX-X4-lz2" secondAttribute="trailing" constant="60" id="ohp-7O-hG9"/>
                         <constraint firstItem="aoX-X4-lz2" firstAttribute="top" secondItem="4sh-z7-MAx" secondAttribute="bottom" constant="20" id="qOE-qW-yhk"/>
                         <constraint firstAttribute="width" constant="400" id="sZp-kh-6sM"/>
