@@ -15,10 +15,13 @@ class InputTaskVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var piker = UIDatePicker()
+    var toolBar = UIToolbar()
     var selectedDate: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskField.delegate = self
+        dateField.delegate = self
         navigationController?.navigationBar.tintColor = .white
         taskField.textColor = .black
         dateField.textColor = .black
@@ -36,6 +39,13 @@ class InputTaskVC: UIViewController {
         piker.preferredDatePickerStyle = .wheels
         piker.addTarget(self, action: #selector(dateDidPiked), for: .allEvents)
         
+        toolBar.sizeToFit()
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        toolBar.setItems([spaceButton, doneButton], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        dateField.inputAccessoryView = toolBar
+
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -75,5 +85,10 @@ class InputTaskVC: UIViewController {
         let taskVC = TableTasksVC.self(nibName: String(describing: TableTasksVC.self), bundle: nil)
         taskVC.modalTransitionStyle = .flipHorizontal
         present(taskVC, animated: true)
+    }
+}
+extension InputTaskVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dateField.becomeFirstResponder()
     }
 }
